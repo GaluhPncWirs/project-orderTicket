@@ -31,6 +31,9 @@ export default function HomePage() {
         <button className="btnSearch" type="submit">
           Cari
         </button>
+        <button className="btnSearch" type="submit">
+          hanya testing saja
+        </button>
       </form>
     </RootContainer>
   );
