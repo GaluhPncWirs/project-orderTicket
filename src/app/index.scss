@@ -4,19 +4,19 @@
   box-sizing: border-box;
 }
 
+.globalContainer{
+  background-color: #1e293b;
+}
+
 .rootContainer{
   width: 95%;
   margin: auto;
-  margin-top: 10px;
+  color: azure;
 }
 
 Link {
   text-decoration: none;
   color: aqua;
-}
-
-.containerSearchParam{
-  margin-bottom: 25px;
 }
 
 .inputSearch{
@@ -43,10 +43,3 @@ Link {
   }
 }
 
-.btnSearch{
-  padding: 10px;
-  font-size: 20px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  border-radius: 8px;
-}

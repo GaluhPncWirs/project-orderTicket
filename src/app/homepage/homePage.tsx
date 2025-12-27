@@ -1,40 +1,22 @@
-import type React from "react";
-import { useNavigate } from "react-router";
 import RootContainer from "../../layout/rootContainer";
-// import { useParams } from "react-router";
+import "./style.scss";
 
 export default function HomePage() {
-  // const [count, setCount] = useState(0);
-  const navigate = useNavigate();
-  // const location = useLocation();
-  // const { idProd } = useParams();
-
-  function handleSearchParams(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const targetInput = event.target as HTMLFormElement;
-    const valueInput = targetInput.searchParam.value;
-    navigate(`/category/${valueInput}`);
-  }
-
   return (
     <RootContainer>
-      <form
-        className="containerSearchParam"
-        onSubmit={(e) => handleSearchParams(e)}
-      >
-        <div className="inputSearch">
-          <label htmlFor="searchParam" className="inputSearch__label">
-            Cari Produk
-          </label>
-          <input type="text" className="inputSearch__input" id="searchParam" />
+      <div className="containerHomePage">
+        <div className="heroSection">
+          <h1 className="heroSection__title">
+            Beli Tiket Konser Favoritmu Sekarang
+          </h1>
+          <h3 className="heroSection__subTitle">Resmi, Aman, dan Cepat</h3>
+          <button className="heroSection__btnCTA">Cari Konser</button>
         </div>
-        <button className="btnSearch" type="submit">
-          Cari
-        </button>
-        <button className="btnSearch" type="submit">
-          hanya testing saja
-        </button>
-      </form>
+
+        <div className="konserUnggulan">
+          <h1>Konser Unggulan</h1>
+        </div>
+      </div>
     </RootContainer>
   );
 }

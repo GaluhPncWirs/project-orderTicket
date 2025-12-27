@@ -4,7 +4,12 @@ import "./style.scss";
 export default function NavigationBar() {
   return (
     <nav className="navbar">
-      <ul className="navbar__ul">
+      <img
+        src="/images/navbar/GigsTicket_logo.png"
+        alt="Logo"
+        className="navbar__logo"
+      />
+      <ul className="navbar__text">
         <li>
           <Link to="/" className="link">
             Home
@@ -12,20 +17,28 @@ export default function NavigationBar() {
         </li>
         <li>
           <Link to="/about" className="link">
-            About
+            Konser
           </Link>
         </li>
         <li>
           <Link to="/" className="link">
-            Gallery
+            Jadwal
           </Link>
         </li>
         <li>
           <Link to="/" className="link">
-            Blogspot
+            Bantuan
           </Link>
         </li>
       </ul>
+      <div className="navbar__search">
+        <img
+          src="/images/navbar/search.png"
+          alt="Search"
+          className="navbar__search__img"
+        />
+        <input type="text" className="navbar__search__inputSearch" />
+      </div>
     </nav>
   );
 }
