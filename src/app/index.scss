@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.rootContainer{
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+Link {
+  text-decoration: none;
+  color: aqua;
+}
+
+.containerSearchParam{
+  margin-bottom: 25px;
+}
+
+.inputSearch{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 5px;
+  margin-bottom: 10px;
+
+  &__label{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  &__input{
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+.btnSearch{
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
