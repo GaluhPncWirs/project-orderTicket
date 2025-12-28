@@ -1,3 +1,6 @@
+@import "../variabels";
+
+
 .containerHomePage{
     padding-bottom: 20px;
 }
@@ -27,7 +30,7 @@
     }
 
     &__btnCTA{
-        background-color:  #f43f5e;
+        background-color: $secondaryColor;
         border-radius: 7px;
         padding: 12px;
         cursor: pointer;
@@ -45,4 +48,60 @@
 
 .konserUnggulan{
     margin-top: 25px;
+
+    > h1{
+        font-size: 40px;
+    }
+
+    &__listConcert{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+
+.upComingAtCity{
+    margin-top: 25px;
+
+    > h1{
+        font-size: 40px;
+    }
+
+    &__listCity{
+        margin-top: 20px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+
+        li{
+            background-color: azure;
+            color: black;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            border-radius: 7px;
+            letter-spacing: 1px;
+        }
+
+        button{
+            cursor: pointer;
+            border-radius: 7px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            img{
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
 }

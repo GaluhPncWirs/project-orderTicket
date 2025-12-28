@@ -1,3 +1,4 @@
+import CardKonserUnggulan from "../../components/card/content";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 
@@ -15,6 +16,23 @@ export default function HomePage() {
 
         <div className="konserUnggulan">
           <h1>Konser Unggulan</h1>
+          <div className="konserUnggulan__listConcert">
+            <CardKonserUnggulan />
+            <CardKonserUnggulan />
+            <CardKonserUnggulan />
+          </div>
+        </div>
+
+        <div className="upComingAtCity">
+          <h1>Akan Datang di Kotamu</h1>
+          <ul className="upComingAtCity__listCity">
+            <li>Jakarta</li>
+            <li>Surabaya</li>
+            <li>Bandung</li>
+            <button>
+              <img src="/images/homePage/next.png" alt="Next" />
+            </button>
+          </ul>
         </div>
       </div>
     </RootContainer>
