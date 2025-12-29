@@ -19,6 +19,10 @@ Link {
   color: aqua;
 }
 
+li{
+  list-style: none;
+}
+
 .inputSearch{
   display: flex;
   flex-direction: column;
