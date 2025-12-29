@@ -29,10 +29,17 @@ export default function HomePage() {
             <li>Jakarta</li>
             <li>Surabaya</li>
             <li>Bandung</li>
-            <button>
-              <img src="/images/homePage/next.png" alt="Next" />
-            </button>
+            <li>Medan</li>
+            <li>Lampung</li>
+            <li>Bali</li>
           </ul>
+          <div className="upComingAtCity__city">
+            <img src="/images/homePage/next.png" alt="arrowLeft" />
+            <CardKonserUnggulan />
+            <CardKonserUnggulan />
+            <CardKonserUnggulan />
+            <img src="/images/homePage/next.png" alt="arrowRight" />
+          </div>
         </div>
       </div>
     </RootContainer>
