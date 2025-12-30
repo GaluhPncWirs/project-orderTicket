@@ -4,8 +4,8 @@ import "./index.scss";
 import HomePage from "./homepage/homePage.tsx";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import AboutPage from "./about/aboutPage.tsx";
 import Category from "./category/category.tsx";
+import Konser from "./konser/konser.tsx";
 
 const rootApp = document.getElementById("root");
 
@@ -15,8 +15,8 @@ const route = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/about",
-    element: <AboutPage />,
+    path: "/konser",
+    element: <Konser />,
   },
   {
     path: "/category/:idProd",

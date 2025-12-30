@@ -19,44 +19,44 @@ export default function Footer() {
             <div className="footerInfoWeb__descList__first">
               <h1>Kategori</h1>
               <ul>
-                <li>
-                  <Link to="">Home</Link>
-                </li>
-                <li>
-                  <Link to="">Konser</Link>
-                </li>
-                <li>
-                  <Link to="">Jadwal</Link>
-                </li>
-                <li>
-                  <Link to="">Bantuan</Link>
-                </li>
+                <Link to="" className="link">
+                  Home
+                </Link>
+                <Link to="" className="link">
+                  Konser
+                </Link>
+                <Link to="" className="link">
+                  Jadwal
+                </Link>
+                <Link to="" className="link">
+                  Bantuan
+                </Link>
               </ul>
             </div>
             <div className="footerInfoWeb__descList__second">
               <h1>Informasi</h1>
               <ul>
-                <li>
-                  <Link to="">Tentang Kami</Link>
-                </li>
-                <li>
-                  <Link to="">Kebijakan Privasi</Link>
-                </li>
-                <li>
-                  <Link to="">Syarat & Ketentuan</Link>
-                </li>
+                <Link to="" className="link">
+                  Tentang Kami
+                </Link>
+                <Link to="" className="link">
+                  Kebijakan Privasi
+                </Link>
+                <Link to="" className="link">
+                  Syarat & Ketentuan
+                </Link>
               </ul>
             </div>
             <div className="footerInfoWeb__descList__third">
               <h1>Hubungi Kami</h1>
               <ul>
                 <li>
-                  <img src="" alt="" />
+                  <img src="/images/footer/call.png" alt="Telp" />
                   <span>0896-3712-9854</span>
                 </li>
                 <li>
-                  <img src="" alt="" />
-                  <Link to="mailto:support@gigsticket.com">
+                  <img src="/images/footer/mail.png" alt="Email" />
+                  <Link to="mailto:support@gigsticket.com" className="link">
                     support@gigsticket.com
                   </Link>
                 </li>

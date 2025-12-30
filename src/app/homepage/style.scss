@@ -5,7 +5,6 @@
     padding-bottom: 20px;
 }
 
-
 .heroSection{
     width: 100%;
     height: 100vh;
@@ -18,9 +17,11 @@
     flex-direction: column;
     gap: 10px;
     text-shadow: 0px 1px 1px rgb(0 0 0 / 0.1), 0px 1px 2px rgb(0 0 0 / 0.1), 0px 2px 4px rgb(0 0 0 / 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
     &__title{
-        font-size: 50px;
+        font-size: 45px;
         letter-spacing: 2px;
     }
 
@@ -47,14 +48,14 @@
 }
 
 .konserUnggulan{
-    margin-top: 25px;
+    margin-top: 30px;
 
     > h1{
         font-size: 40px;
+        margin-bottom: 25px;
     }
 
     &__listConcert{
-        margin-top: 20px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -64,57 +65,81 @@
 
 
 .upComingAtCity{
-    margin-top: 25px;
+    margin-top: 30px;
 
     > h1{
         font-size: 40px;
+        margin-bottom: 30px;
     }
 
     &__listCity{
-        margin-top: 20px;
-        list-style: none;
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 30px;
 
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            overflow-x: auto;
 
-        li{
-            background-color: azure;
-            color: black;
-            font-size: 25px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-right: 20px;
-            padding-left: 20px;
-            border-radius: 7px;
-            letter-spacing: 1px;
-            cursor: pointer;
+            li{
+                background-color: azure;
+                color: black;
+                font-size: 25px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 20px;
+                padding-left: 20px;
+                border-radius: 7px;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
         }
 
-        button{
+        > img{
+            height: 45px;
+            width: 45px;
+        }
+
+        > img:nth-child(1){
+            background-color: aliceblue;
+            padding: 7px;
             cursor: pointer;
             border-radius: 7px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            padding-right: 20px;
-            padding-left: 20px;
+        }
 
-            img{
-                height: 40px;
-                width: 40px;
-            }
+        > img:nth-child(3){
+            background-color: aliceblue;
+            padding: 7px;
+            cursor: pointer;
+            rotate: 180deg;
+            border-radius: 7px;
         }
     }
 
     &__city{
         display: flex;
-        margin-top: 30px;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+        margin-top: 35px;
 
-        > img:nth-child(1){
+        > div{
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+        }
+
+        > img{
             width: 50px;
             height: 50px;
+        }
+
+        > img:nth-child(1){
             background-color: aliceblue;
             border-radius: 100%;
             padding: 7px;
@@ -122,9 +147,7 @@
             cursor: pointer;
         }
 
-        > img:nth-child(5){
-            width: 50px;
-            height: 50px;
+        > img:nth-child(3){
             background-color: aliceblue;
             border-radius: 100%;
             padding: 7px;
@@ -136,3 +159,102 @@
         }
     }
 }
+
+// responsive design
+
+// @media (width >= 40rem ){
+//     .upComingAtCity{
+//     margin-top: 30px;
+
+//     > h1{
+//         font-size: 40px;
+//         margin-bottom: 30px;
+//     }
+
+//     &__listCity{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-evenly;
+//         gap: 30px;
+
+//         ul{
+//             list-style: none;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             gap: 25px;
+//             overflow-x: auto;
+
+//             li{
+//                 background-color: azure;
+//                 color: black;
+//                 font-size: 25px;
+//                 padding-top: 10px;
+//                 padding-bottom: 10px;
+//                 padding-right: 20px;
+//                 padding-left: 20px;
+//                 border-radius: 7px;
+//                 letter-spacing: 1px;
+//                 cursor: pointer;
+//             }
+//         }
+
+//         > img{
+//             height: 45px;
+//             width: 45px;
+//         }
+
+//         > img:nth-child(1){
+//             background-color: aliceblue;
+//             padding: 7px;
+//             cursor: pointer;
+//             border-radius: 7px;
+//         }
+
+//         > img:nth-child(3){
+//             background-color: aliceblue;
+//             padding: 7px;
+//             cursor: pointer;
+//             rotate: 180deg;
+//             border-radius: 7px;
+//         }
+//     }
+
+//     &__city{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         gap: 30px;
+//         margin-top: 35px;
+
+//         > div{
+//             display: flex;
+//             gap: 20px;
+//         }
+
+//         > img{
+//             width: 50px;
+//             height: 50px;
+//         }
+
+//         > img:nth-child(1){
+//             background-color: aliceblue;
+//             border-radius: 100%;
+//             padding: 7px;
+//             rotate: 180deg;
+//             cursor: pointer;
+//         }
+
+//         > img:nth-child(3){
+//             background-color: aliceblue;
+//             border-radius: 100%;
+//             padding: 7px;
+//             cursor: pointer;
+//         }
+
+//         > img:hover{
+//             background-color: azure;
+//         }
+//     }
+// }
+// }

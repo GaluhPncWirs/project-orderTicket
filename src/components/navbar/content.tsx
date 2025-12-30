@@ -10,26 +10,18 @@ export default function NavigationBar() {
         className="navbar__logo"
       />
       <ul className="navbar__text">
-        <li>
-          <Link to="/" className="link">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" className="link">
-            Konser
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="link">
-            Jadwal
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="link">
-            Bantuan
-          </Link>
-        </li>
+        <Link to="/" className="linkNavbar">
+          Home
+        </Link>
+        <Link to="/konser" className="linkNavbar">
+          Konser
+        </Link>
+        <Link to="/" className="linkNavbar">
+          Jadwal
+        </Link>
+        <Link to="/" className="linkNavbar">
+          Bantuan
+        </Link>
       </ul>
       <div className="navbar__search">
         <img

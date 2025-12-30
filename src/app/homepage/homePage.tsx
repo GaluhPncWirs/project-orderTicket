@@ -25,19 +25,25 @@ export default function HomePage() {
 
         <div className="upComingAtCity">
           <h1>Akan Datang di Kotamu</h1>
-          <ul className="upComingAtCity__listCity">
-            <li>Jakarta</li>
-            <li>Surabaya</li>
-            <li>Bandung</li>
-            <li>Medan</li>
-            <li>Lampung</li>
-            <li>Bali</li>
-          </ul>
+          <div className="upComingAtCity__listCity">
+            <img src="/images/homePage/arrow-double.png" alt="arrowLeft" />
+            <ul>
+              <li>Jakarta</li>
+              <li>Surabaya</li>
+              <li>Bandung</li>
+              <li>Medan</li>
+              <li>Lampung</li>
+              <li>Bali</li>
+            </ul>
+            <img src="/images/homePage/arrow-double.png" alt="arrowRight" />
+          </div>
           <div className="upComingAtCity__city">
             <img src="/images/homePage/next.png" alt="arrowLeft" />
-            <CardKonserUnggulan />
-            <CardKonserUnggulan />
-            <CardKonserUnggulan />
+            <div>
+              <CardKonserUnggulan />
+              <CardKonserUnggulan />
+              <CardKonserUnggulan />
+            </div>
             <img src="/images/homePage/next.png" alt="arrowRight" />
           </div>
         </div>

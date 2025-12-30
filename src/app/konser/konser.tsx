@@ -1,10 +1,10 @@
 import RootContainer from "../../layout/rootContainer";
 
-export default function AboutPage() {
+export default function Konser() {
   return (
     <RootContainer>
       <div>
-        <h1>hello dunia</h1>
+        <h1>hello konser</h1>
       </div>
     </RootContainer>
   );
