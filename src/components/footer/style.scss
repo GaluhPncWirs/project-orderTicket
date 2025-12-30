@@ -1,0 +1,163 @@
+.containerFooter{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.footerInfoWeb{
+    margin-top: 50px;
+    width: 80%;
+    flex-basis: 75%;
+
+    &__title{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        > img{
+            width: 350px;
+        }
+
+        > div{
+            height: 50px;
+            width: 2px;
+            background-color: #94a3b8;
+        }
+
+        > h3{
+            font-size: 23px;
+            padding-left: 10px;
+        }
+    }
+
+    &__descList{
+        display: flex;
+        justify-content: space-around;
+        
+
+        &__first{
+            
+            > h1{
+                margin-bottom: 7px;
+            }
+
+            > ul{
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                font-size: 20px;
+            }
+        }
+
+        &__second{
+
+            > h1{
+                margin-bottom: 7px;
+            }
+
+            > ul{
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                font-size: 20px;
+            }
+        }
+
+        &__third{
+            > h1{
+                margin-bottom: 7px;
+            }
+
+            > ul{
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.containerFooter .lineVertical{
+    height: 250px;
+    width: 2px;
+    background-color: #94a3b8;
+}
+
+.footerInfoApp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: 25%;
+
+    &__downloadApp{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        
+        > h1 {
+            font-size: 25px;
+            letter-spacing: 1.5px;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__playstore{
+            background-color: #0f172a;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+        }
+
+        &__appStore{
+            background-color: #0f172a;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+        }
+    }
+
+    &__sosmed{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .toSosmed{
+            background-color: #64748b;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.lineHorizontal{
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    background-color: #94a3b8;
+}
+
+.copyright{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
