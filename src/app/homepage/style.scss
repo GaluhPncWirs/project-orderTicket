@@ -63,7 +63,6 @@
     }
 }
 
-
 .upComingAtCity{
     margin-top: 30px;
 
@@ -73,51 +72,26 @@
     }
 
     &__listCity{
+        list-style: none;
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
         gap: 30px;
+        overflow-x: auto;
+        width: 85%;
+        margin: auto;
 
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            overflow-x: auto;
-
-            li{
-                background-color: azure;
-                color: black;
-                font-size: 25px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-right: 20px;
-                padding-left: 20px;
-                border-radius: 7px;
-                letter-spacing: 1px;
-                cursor: pointer;
-            }
-        }
-
-        > img{
-            height: 45px;
-            width: 45px;
-        }
-
-        > img:nth-child(1){
-            background-color: aliceblue;
-            padding: 7px;
-            cursor: pointer;
+        li{
+            background-color: azure;
+            color: black;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
             border-radius: 7px;
-        }
-
-        > img:nth-child(3){
-            background-color: aliceblue;
-            padding: 7px;
+            letter-spacing: 1px;
             cursor: pointer;
-            rotate: 180deg;
-            border-radius: 7px;
         }
     }
 
@@ -156,6 +130,104 @@
 
         > img:hover{
             background-color: azure;
+        }
+    }
+}
+
+.artistPopular{
+    margin-top: 30px;
+    background-color: #475569;
+    border-radius: 10px;
+
+    &__search{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #334155;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__resultArtists{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &__artist{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+
+            > img {
+                width: 75px;
+                height: 75px;
+                border-radius: 100%;
+            }
+
+            > h3{
+                font-size: 25px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &__btnSeeAll{
+        padding: 25px;
+    }
+}
+
+.genreMusic{
+    margin-top: 30px;
+    background-color: #475569;
+    border-radius: 10px;
+
+    > h1 {
+        background-color: #334155;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__listItem{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 25px;
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            background-color: #94a3b8;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+
+            > img {
+                flex-basis: 80%;
+                width: 85px;
+                object-fit: contain;
+            }
+
+            > h3{
+                flex-basis: 20%;
+                font-size: 25px;
+                letter-spacing: 1px;
+                background-color: #64748b;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 100%;
+                text-align: center;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-size: 22px;
+            }
         }
     }
 }

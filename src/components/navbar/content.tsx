@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import "./style.scss";
+import SearchInput from "../searchInput/content";
 
 export default function NavigationBar() {
   return (
@@ -23,14 +24,7 @@ export default function NavigationBar() {
           Bantuan
         </Link>
       </ul>
-      <div className="navbar__search">
-        <img
-          src="/images/navbar/search.png"
-          alt="Search"
-          className="navbar__search__img"
-        />
-        <input type="text" className="navbar__search__inputSearch" />
-      </div>
+      <SearchInput />
     </nav>
   );
 }
