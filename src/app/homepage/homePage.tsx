@@ -1,9 +1,10 @@
 import { useId } from "react";
-import CardKonserUnggulan from "../../components/card/content";
+import CardKonserUnggulan from "../../components/cardArtist/content";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 import SearchInput from "../../components/searchInput/content";
 import Button from "../../components/button/content";
+import CardArtikel from "../../components/cardArtikel/content";
 
 type artis = {
   id: string;
@@ -55,39 +56,64 @@ export default function HomePage() {
   const genreMusic = [
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/pop-music.png",
       altImg: "Pop",
       namaGenre: "Pop",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/rock-music.png",
       altImg: "Rock",
       namaGenre: "Rock",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/edm.png",
       altImg: "EDM",
       namaGenre: "EDM",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/jazz.png",
       altImg: "Jazz",
       namaGenre: "Jazz",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/k-pop.png",
       altImg: "K-Pop",
       namaGenre: "K-Pop",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
+      srcImg: "/images/homePage/hip-hop.png",
       altImg: "Hip-Hop",
       namaGenre: "Hip-Hop",
+    },
+  ];
+  const artikel = [
+    {
+      id: useId(),
+      srcImg: "/images/homePage/artikel-1.jpg",
+      titleArtikel: "Judul Artikel",
+      descArtikel:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, eaque!",
+      dateArtikel: "07 Jan 2026",
+    },
+    {
+      id: useId(),
+      srcImg: "/images/homePage/artikel-1.jpg",
+      titleArtikel: "Judul Artikel",
+      descArtikel: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      dateArtikel: "16 Mei 2026",
+    },
+    {
+      id: useId(),
+      srcImg: "/images/homePage/artikel-2.jpg",
+      titleArtikel: "Judul Artikel",
+      descArtikel:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, nam?",
+      dateArtikel: "22 Jun 2026",
     },
   ];
   return (
@@ -168,6 +194,26 @@ export default function HomePage() {
                 <div key={item.id} className="genreMusic__listItem__item">
                   <img src={item.srcImg} alt={item.altImg} />
                   <h3>{item.namaGenre}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* "/images/homePage/artikel-1.jpg" */}
+
+        <section>
+          <div className="artikel">
+            <h1>Artikel Terkini</h1>
+            <div className="artikel__cardArtikel">
+              {artikel.map((item: any) => (
+                <div key={item.id}>
+                  <CardArtikel
+                    srcImg={item.srcImg}
+                    titleArtikel={item.titleArtikel}
+                    descArtikel={item.descArtikel}
+                    dateArtikel={item.dateArtikel}
+                  />
                 </div>
               ))}
             </div>
