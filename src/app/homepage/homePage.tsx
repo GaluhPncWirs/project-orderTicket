@@ -1,10 +1,11 @@
-import { useId, useRef, useState } from "react";
-import CardKonserUnggulan from "../../components/cardArtist/content";
+import { useId, useState } from "react";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 import SearchInput from "../../components/searchInput/content";
 import Button from "../../components/button/content";
-import CardArtikel from "../../components/cardArtikel/content";
+import CardArtikel from "../../layout/cardArtikel/content";
+import CardArtist from "../../layout/cardArtist/content";
+import type { cardArtikel } from "../../types/cardArtikel";
 
 type artis = {
   id: string;
@@ -99,7 +100,6 @@ export default function HomePage() {
   ];
   const artikel = [
     {
-      id: useId(),
       srcImg: "/images/homePage/artikel-1.jpg",
       titleArtikel: "Judul Artikel",
       descArtikel:
@@ -107,14 +107,12 @@ export default function HomePage() {
       dateArtikel: "07 Jan 2026",
     },
     {
-      id: useId(),
       srcImg: "/images/homePage/artikel-1.jpg",
       titleArtikel: "Judul Artikel",
       descArtikel: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       dateArtikel: "16 Mei 2026",
     },
     {
-      id: useId(),
       srcImg: "/images/homePage/artikel-2.jpg",
       titleArtikel: "Judul Artikel",
       descArtikel:
@@ -125,7 +123,6 @@ export default function HomePage() {
 
   const [seeAllSingerPopular, setSeeAllSingerPopular] =
     useState<boolean>(false);
-  const gridRef = useRef<HTMLDivElement>(null);
   return (
     <RootContainer>
       <main className="containerHomePage">
@@ -143,9 +140,24 @@ export default function HomePage() {
           <div className="konserUnggulan">
             <h1>Konser Unggulan</h1>
             <div className="konserUnggulan__listConcert">
-              <CardKonserUnggulan />
-              <CardKonserUnggulan />
-              <CardKonserUnggulan />
+              <CardArtist
+                srcImg="/images/homePage/bruno-mars.webp"
+                nameSinger="Bruno Mars"
+                dateAndPlace="12 Mei 2026"
+                price="500.000"
+              />
+              <CardArtist
+                srcImg="/images/homePage/charle-puth.webp"
+                nameSinger="Charlie Puth"
+                dateAndPlace="05 Februari 2026"
+                price="700.000"
+              />
+              <CardArtist
+                srcImg="/images/homePage/selena-gomez.webp"
+                nameSinger="Selena Gomez"
+                dateAndPlace="15 Agustus 2026"
+                price="400.000"
+              />
             </div>
           </div>
         </section>
@@ -164,9 +176,24 @@ export default function HomePage() {
             <div className="upComingAtCity__city">
               <img src="/images/homePage/next.png" alt="arrowLeft" />
               <div>
-                <CardKonserUnggulan />
-                <CardKonserUnggulan />
-                <CardKonserUnggulan />
+                <CardArtist
+                  srcImg="/images/homePage/taylor-swift.webp"
+                  nameSinger="Taylor Swift"
+                  dateAndPlace="10 Juni 2026"
+                  price="500.000"
+                />
+                <CardArtist
+                  srcImg="/images/homePage/image-dragon.webp"
+                  nameSinger="Image Dragon"
+                  dateAndPlace="18 April 2026"
+                  price="500.000"
+                />
+                <CardArtist
+                  srcImg="/images/homePage/bruno-mars.webp"
+                  nameSinger="Bruno Mars"
+                  dateAndPlace="26 Oktober 2026"
+                  price="500.000"
+                />
               </div>
               <img src="/images/homePage/next.png" alt="arrowRight" />
             </div>
@@ -180,7 +207,6 @@ export default function HomePage() {
               <SearchInput />
             </div>
             <div
-              ref={gridRef}
               className={`artistPopular__resultArtists ${
                 seeAllSingerPopular ? `expanded` : ``
               }`}
@@ -227,8 +253,8 @@ export default function HomePage() {
           <div className="artikel">
             <h1>Artikel Terkini</h1>
             <div className="artikel__cardArtikel">
-              {artikel.map((item: any) => (
-                <div key={item.id}>
+              {artikel.map((item: cardArtikel, i: number) => (
+                <div key={i}>
                   <CardArtikel
                     srcImg={item.srcImg}
                     titleArtikel={item.titleArtikel}
