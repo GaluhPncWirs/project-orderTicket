@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, useRef, useState } from "react";
 import CardKonserUnggulan from "../../components/cardArtist/content";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
@@ -24,33 +24,39 @@ export default function HomePage() {
   const artisPopuler = [
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
-      altImg: "asd",
-      namaArtis: "asd",
+      srcImg: "/images/homePage/taylor-swift.webp",
+      altImg: "Taylor Swift",
+      namaArtis: "Taylor Swift",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
-      altImg: "asd",
-      namaArtis: "asd",
+      srcImg: "/images/homePage/bruno-mars.webp",
+      altImg: "Bruno Mars",
+      namaArtis: "Bruno Mars",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
-      altImg: "asd",
-      namaArtis: "asd",
+      srcImg: "/images/homePage/charle-puth.webp",
+      altImg: "Charlie Puth",
+      namaArtis: "Charlie Puth",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
-      altImg: "asd",
-      namaArtis: "asd",
+      srcImg: "/images/homePage/image-dragon.webp",
+      altImg: "Image Dragon",
+      namaArtis: "Image Dragon",
     },
     {
       id: useId(),
-      srcImg: "/images/homePage/next.png",
-      altImg: "asd",
-      namaArtis: "asd",
+      srcImg: "/images/homePage/selena-gomez.webp",
+      altImg: "Selena Gomez",
+      namaArtis: "Selena Gomez",
+    },
+    {
+      id: useId(),
+      srcImg: "/images/homePage/selena-gomez.webp",
+      altImg: "Selena Gomez",
+      namaArtis: "Selena Gomez",
     },
   ];
   const genreMusic = [
@@ -116,6 +122,10 @@ export default function HomePage() {
       dateArtikel: "22 Jun 2026",
     },
   ];
+
+  const [seeAllSingerPopular, setSeeAllSingerPopular] =
+    useState<boolean>(false);
+  const gridRef = useRef<HTMLDivElement>(null);
   return (
     <RootContainer>
       <main className="containerHomePage">
@@ -166,10 +176,15 @@ export default function HomePage() {
         <section>
           <div className="artistPopular">
             <div className="artistPopular__search">
-              <h1>Artis Terpopuler</h1>
+              <h1>Penyanyi Terpopuler</h1>
               <SearchInput />
             </div>
-            <div className="artistPopular__resultArtists">
+            <div
+              ref={gridRef}
+              className={`artistPopular__resultArtists ${
+                seeAllSingerPopular ? `expanded` : ``
+              }`}
+            >
               {artisPopuler.map((item: artis) => (
                 <div
                   key={item.id}
@@ -180,9 +195,17 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="artistPopular__btnSeeAll">
-              <Button btnType="button" btnTitle="Lihat Semua" />
-            </div>
+            {artisPopuler.length > 5 && (
+              <div className="artistPopular__btnSeeAll">
+                <Button
+                  btnType="button"
+                  btnTitle={seeAllSingerPopular ? "Lihat Semua" : "Tutup"}
+                  handleClick={() =>
+                    setSeeAllSingerPopular(!seeAllSingerPopular)
+                  }
+                />
+              </div>
+            )}
           </div>
         </section>
 
@@ -199,8 +222,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* "/images/homePage/artikel-1.jpg" */}
 
         <section>
           <div className="artikel">

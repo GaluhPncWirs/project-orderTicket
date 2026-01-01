@@ -12,9 +12,9 @@ export default function CardArtikel(props: propsCardArtikel) {
   const { srcImg, titleArtikel, descArtikel, dateArtikel } = props;
 
   return (
-    <div>
-      <img src={srcImg} alt="Artikel" className="imgArtikel" />
-      <div className="descArtikel">
+    <div className="cardArtikel">
+      <img src={srcImg} alt="Artikel" className="cardArtikel__imgArtikel" />
+      <div className="cardArtikel__imgArtikel__descArtikel">
         <h2>{titleArtikel}</h2>
         <p>{descArtikel}</p>
         <h4>{dateArtikel}</h4>
