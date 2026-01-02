@@ -108,7 +108,7 @@ export default function Footer() {
 
       <div className="lineHorizontal" />
       <h2 className="copyright">
-        &copy; 2026, GigsTicket, All Rights Reserved.
+        &copy; Copyright 2026, GigsTicket, All Rights Reserved.
       </h2>
     </div>
   );

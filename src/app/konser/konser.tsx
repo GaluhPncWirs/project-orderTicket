@@ -1,3 +1,4 @@
+import Button from "../../components/button/content";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 
@@ -10,11 +11,52 @@ export default function Konser() {
         </div>
         <div className="containerConcert__contentConcert">
           <ul className="containerConcert__contentConcert__sidebar">
-            <li>Filter</li>
-            <li>Kota</li>
-            <li>Tanggal</li>
-            <li>Genre</li>
-            <li>Harga</li>
+            <div className="containerConcert__contentConcert__sidebar__filter">
+              <h3>Filter</h3>
+              <img src="/images/concertPage/filter.png" alt="Kota" />
+            </div>
+            <li>
+              <div className="textList">
+                <img src="/images/concertPage/city.png" alt="Kota" />
+                <h4>Kota</h4>
+              </div>
+              <div className="arrow">
+                <div />
+                <div />
+              </div>
+            </li>
+            <li>
+              <div className="textList">
+                <img src="/images/concertPage/date.png" alt="Kota" />
+                <h4>Tanggal</h4>
+              </div>
+
+              <div className="arrow">
+                <div />
+                <div />
+              </div>
+            </li>
+            <li>
+              <div className="textList">
+                <img src="/images/concertPage/genre.png" alt="Kota" />
+                <h4>Genre</h4>
+              </div>
+              <div className="arrow">
+                <div />
+                <div />
+              </div>
+            </li>
+            <li>
+              <div className="textList">
+                <img src="/images/concertPage/price.png" alt="Kota" />
+                <h4>Harga</h4>
+              </div>
+              <div className="arrow">
+                <div />
+                <div />
+              </div>
+            </li>
+            <span />
           </ul>
           <div className="containerConcert__contentConcert__informConcert">
             <img
@@ -65,7 +107,15 @@ export default function Konser() {
                 debitis tenetur quasi excepturi adipisci tempora
               </p>
             </div>
+            <span />
           </div>
+        </div>
+        <div className="containerConcert__btnChosenTicket">
+          <Button
+            btnTitle="Pilih Tiket"
+            btnType="button"
+            handleClick={() => false}
+          />
         </div>
       </div>
     </RootContainer>
