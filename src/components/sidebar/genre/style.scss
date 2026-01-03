@@ -1,4 +1,4 @@
-.containerChoosenCity{
+.containerChoosenGenre{
     max-height: 0;
     background-color: #334155;
     border-radius: 5px;
@@ -26,12 +26,7 @@
         transform: translateY(0);
     }
 
-    > input {
-        background-color: #0f172a;
-        width: 250px;
-    }
-
-    &__listCity{
+    &__listGenre{
         display: flex;
         flex-direction: column;
         gap: 10px;

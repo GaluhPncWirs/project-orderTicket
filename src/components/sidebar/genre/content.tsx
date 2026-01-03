@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import "./style.scss";
-import SearchInput from "../../searchInput/content";
 import Button from "../../button/content";
 
-export default function City() {
+export default function Genre() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const choosenCity = useRef<any>(null);
+  const choosenGenre = useRef<any>(null);
 
   useEffect(() => {
     function handleClickOutsideComponent(event: any) {
-      if (choosenCity.current && !choosenCity.current.contains(event.target)) {
+      if (
+        choosenGenre.current &&
+        !choosenGenre.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     }
@@ -21,45 +23,44 @@ export default function City() {
   }, []);
 
   return (
-    <div ref={choosenCity}>
+    <div ref={choosenGenre}>
       <button onClick={() => setIsOpen(!isOpen)} className="btnTrigger">
         <div className="btnTrigger__textContent">
-          <img src="/images/concertPage/city.png" alt="Kota" />
-          <h4>Kota</h4>
+          <img src="/images/concertPage/genre.png" alt="Kota" />
+          <h4>Genre</h4>
         </div>
         <div className={`arrow ${isOpen && `turnBottom`}`}>
           <div />
           <div />
         </div>
       </button>
-      <div className={`containerChoosenCity ${isOpen && `showContent`}`}>
-        <h4>Pilih Kota</h4>
-        <SearchInput />
+      <div className={`containerChoosenGenre ${isOpen && `showContent`}`}>
+        <h4>Pilih Genre</h4>
         <span className="horizontalLine" />
-        <ul className="containerChoosenCity__listCity">
+        <ul className="containerChoosenGenre__listGenre">
           <li>
             <input type="checkbox" />
-            <h4>Jakarta</h4>
+            <h4>Pop</h4>
           </li>
           <li>
             <input type="checkbox" />
-            <h4>Bandung</h4>
+            <h4>Rock</h4>
           </li>
           <li>
             <input type="checkbox" />
-            <h4>Surabaya</h4>
+            <h4>EDM</h4>
           </li>
           <li>
             <input type="checkbox" />
-            <h4>Yogyakarta</h4>
+            <h4>Jazz</h4>
           </li>
           <li>
             <input type="checkbox" />
-            <h4>Semarang</h4>
+            <h4>K-Pop</h4>
           </li>
           <li>
             <input type="checkbox" />
-            <h4>Medan</h4>
+            <h4>Hip-Hop</h4>
           </li>
         </ul>
         <span className="horizontalLine" />

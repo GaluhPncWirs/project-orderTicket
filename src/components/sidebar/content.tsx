@@ -1,4 +1,6 @@
 import City from "./city/content";
+import DatePicker from "./date/content";
+import Genre from "./genre/content";
 import "./style.scss";
 
 export default function Sidebar() {
@@ -10,31 +12,12 @@ export default function Sidebar() {
       </div>
       <div>
         <City />
-        {/* <div className="arrow">
-          <div />
-          <div />
-        </div> */}
       </div>
       <div>
-        <div className="textList">
-          <img src="/images/concertPage/date.png" alt="Kota" />
-          <h4>Tanggal</h4>
-        </div>
-
-        <div className="arrow">
-          <div />
-          <div />
-        </div>
+        <DatePicker />
       </div>
       <div>
-        <div className="textList">
-          <img src="/images/concertPage/genre.png" alt="Kota" />
-          <h4>Genre</h4>
-        </div>
-        <div className="arrow">
-          <div />
-          <div />
-        </div>
+        <Genre />
       </div>
       <div>
         <div className="textList">

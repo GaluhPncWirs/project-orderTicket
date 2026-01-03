@@ -21,7 +21,7 @@ export default function Konser() {
               <div>
                 <h2>Nama Konser</h2>
                 <h4>Nama Artis</h4>
-                <span />
+                <span className="horizontalLine" />
                 <div>
                   <img src="/images/concertPage/date.png" alt="Date" />
                   <h5>Tanggal & Waktu</h5>
@@ -33,7 +33,7 @@ export default function Konser() {
               </div>
               <img src="/images/concertPage/location.jpg" alt="Location" />
             </div>
-            <span />
+            <span className="horizontalLine" />
             <div className="containerConcert__contentConcert__informConcert__descConcert">
               <h3>Deskripsi Konser</h3>
               <p>
@@ -43,7 +43,7 @@ export default function Konser() {
                 sunt ex odit animi quidem harum.
               </p>
             </div>
-            <span />
+            <span className="horizontalLine" />
             <div className="containerConcert__contentConcert__informConcert__lineUpConcert">
               <h3>Line Up Penyanyi</h3>
               <p>
@@ -52,7 +52,7 @@ export default function Konser() {
                 debitis tenetur quasi excepturi adipisci tempora
               </p>
             </div>
-            <span />
+            <span className="horizontalLine" />
             <div className="containerConcert__contentConcert__informConcert__termsAndConditions">
               <h3>Syarat Dan Ketentuan</h3>
               <p>
@@ -61,7 +61,7 @@ export default function Konser() {
                 debitis tenetur quasi excepturi adipisci tempora
               </p>
             </div>
-            <span />
+            <span className="horizontalLine" />
           </div>
         </div>
         <div className="containerConcert__btnChosenTicket">

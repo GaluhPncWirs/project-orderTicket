@@ -1,0 +1,70 @@
+.containerDatePicker{
+    max-height: 0;
+    background-color: #334155;
+    border-radius: 5px;
+    margin-top: 15px;
+
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+
+    transition:
+        max-height 0.5s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        padding 0.3s ease;
+
+    &.showContent{
+        max-height: 450px;
+        padding: 15px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calendar{
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #cbd5e1;
+        border-radius: 3px;
+        font-size: 18px
+    }
+    
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        > span {
+            font-size: 21px;
+        }
+    }
+
+    &__days{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    &__days, &__dates{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        gap: 7px;
+    }
+
+    &__dates button {
+        &.active{
+            background: #475569;
+            color: #fff;
+        }
+    }
+}
