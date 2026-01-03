@@ -1,0 +1,56 @@
+.sidebar{
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-basis: 25%;
+    background-color: #0f172a;
+    padding: 20px;
+
+    &__filter{
+        background-color: #334155;
+        padding: 10px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        > img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        h4 {
+            color: #f1f5f9;
+            font-size: 23px;
+            letter-spacing: 1px;
+        }
+
+        .arrow{
+            > div {
+                height: 3px;
+                width: 17px;
+                border-radius: 3px;
+                background-color: #94a3b8;
+            }
+
+            :nth-child(1){
+                rotate: 45deg;
+                translate: 0 -5px;
+            }
+            :nth-child(2){
+                rotate: -45deg;
+                translate: 0 3px;
+            }
+        }
+
+    }
+}
