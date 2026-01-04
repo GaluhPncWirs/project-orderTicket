@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./style.scss";
 import Button from "../../button/content";
+import { ChevronRight } from "lucide-react";
 
 export default function Genre() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -29,10 +30,7 @@ export default function Genre() {
           <img src="/images/concertPage/genre.png" alt="Kota" />
           <h4>Genre</h4>
         </div>
-        <div className={`arrow ${isOpen && `turnBottom`}`}>
-          <div />
-          <div />
-        </div>
+        <ChevronRight className={`arrow ${isOpen && `turnBottom`}`} />
       </button>
       <div className={`containerChoosenGenre ${isOpen && `showContent`}`}>
         <h4>Pilih Genre</h4>

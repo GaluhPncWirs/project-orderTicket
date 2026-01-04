@@ -1,6 +1,7 @@
 import City from "./city/content";
 import DatePicker from "./date/content";
 import Genre from "./genre/content";
+import Price from "./price/content";
 import "./style.scss";
 
 export default function Sidebar() {
@@ -20,14 +21,7 @@ export default function Sidebar() {
         <Genre />
       </div>
       <div>
-        <div className="textList">
-          <img src="/images/concertPage/price.png" alt="Kota" />
-          <h4>Harga</h4>
-        </div>
-        <div className="arrow">
-          <div />
-          <div />
-        </div>
+        <Price />
       </div>
       <span />
     </div>
