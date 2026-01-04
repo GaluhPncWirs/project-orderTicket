@@ -1,5 +1,6 @@
 import Button from "../../components/button/content";
 import Sidebar from "../../components/sidebar/content";
+import ChoosenTicket from "../../layout/choosenTicket/content";
 import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 
@@ -62,8 +63,11 @@ export default function Konser() {
               </p>
             </div>
             <span className="horizontalLine" />
+
+            <ChoosenTicket />
           </div>
         </div>
+
         <div className="containerConcert__btnChosenTicket">
           <Button
             btnTitle="Pilih Tiket"

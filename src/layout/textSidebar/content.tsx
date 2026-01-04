@@ -4,22 +4,36 @@ import Button from "../../components/button/content";
 import "./style.scss";
 
 type textSidebarProps = {
-  imgAlt: string;
   imgSrc: string;
+  imgAlt: string;
   textContent: string;
   subTextContent: string;
   children: React.ReactNode;
+
+  defaultOpen?: boolean;
+  onApply: () => void;
 };
 
 export default function TextSidebarClick(props: textSidebarProps) {
-  const arrowRight = useRef<any>(null);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { children, imgSrc, imgAlt, textContent, subTextContent } = props;
+  const {
+    children,
+    imgSrc,
+    imgAlt,
+    textContent,
+    subTextContent,
+    defaultOpen = false,
+    onApply,
+  } = props;
+  const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutsideComponent(event: any) {
-      if (arrowRight.current && !arrowRight.current.contains(event.target)) {
-        setIsOpen(true);
+    function handleClickOutsideComponent(event: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
       }
     }
 
@@ -31,8 +45,12 @@ export default function TextSidebarClick(props: textSidebarProps) {
   }, []);
 
   return (
-    <div ref={arrowRight}>
-      <button onClick={() => setIsOpen(!isOpen)} className="btnTrigger">
+    <div ref={containerRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="btnTrigger"
+      >
         <div className="btnTrigger__textContent">
           <img src={imgSrc} alt={imgAlt} />
           <h4>{textContent}</h4>
@@ -46,11 +64,7 @@ export default function TextSidebarClick(props: textSidebarProps) {
         <span className="horizontalLine" />
         {children}
         <span className="horizontalLine" />
-        <Button
-          btnTitle="Terapkan"
-          btnType="button"
-          handleClick={() => false}
-        />
+        <Button btnTitle="Terapkan" btnType="button" handleClick={onApply} />
       </div>
     </div>
   );

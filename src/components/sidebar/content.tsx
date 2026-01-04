@@ -23,7 +23,7 @@ export default function Sidebar() {
       <div>
         <Price />
       </div>
-      <span />
+      <span className="horizontalLine" />
     </div>
   );
 }

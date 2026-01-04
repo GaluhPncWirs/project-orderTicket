@@ -1,31 +1,12 @@
-import { ChevronRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import Button from "../../button/content";
+import { useState } from "react";
 import "./style.scss";
+import TextSidebarClick from "../../../layout/textSidebar/content";
 
 export default function Price() {
   const MIN_PRICE = 50_000;
   const MAX_PRICE = 10_000_000;
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const choosenPrice = useRef<any>(null);
-  const [rangePriceValue, setRangePriceValue] = useState(100_000);
-
-  useEffect(() => {
-    function handleClickOutsideComponent(event: any) {
-      if (
-        choosenPrice.current &&
-        !choosenPrice.current.contains(event.target)
-      ) {
-        setIsOpen(true);
-      }
-    }
-
-    document.addEventListener("click", handleClickOutsideComponent);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutsideComponent);
-    };
-  }, []);
+  const [rangePriceValue, setRangePriceValue] = useState<number>(100_000);
+  const [editabelMinPrice, setEditabelMinPrice] = useState<number>(MIN_PRICE);
 
   const formatRupiah = (value: number): string => {
     return new Intl.NumberFormat("id-ID", {
@@ -35,40 +16,38 @@ export default function Price() {
     }).format(value);
   };
 
+  // console.log(formatRupiah(editabelMinPrice));
+
   return (
-    <div ref={choosenPrice}>
-      <button onClick={() => setIsOpen(!isOpen)} className="btnTrigger">
-        <div className="btnTrigger__textContent">
-          <img src="/images/concertPage/price.png" alt="Harga" />
-          <h4>Harga</h4>
-        </div>
-        <ChevronRight className={`arrow ${isOpen && `turnBottom`}`} />
-      </button>
-      <div className={`containerRangePrice ${isOpen && `showContent`}`}>
-        <h4>Rentang Harga</h4>
-        <span className="horizontalLine" />
-        <div className="containerRangePrice__content">
+    <TextSidebarClick
+      imgSrc="/images/concertPage/price.png"
+      imgAlt="Harga"
+      textContent="Harga"
+      subTextContent="Rentang Harga"
+      onApply={() => console.log("Apply clicked")}
+    >
+      <div className="rangePrice">
+        <div className="rangePrice__price">
           <div>
-            <span>{formatRupiah(MIN_PRICE)}</span>
-            {"-"}
-            <span>{formatRupiah(rangePriceValue)}</span>
+            <span>Rp.</span>
+            <input
+              type="number"
+              defaultValue={MIN_PRICE}
+              onChange={(e) => setEditabelMinPrice(Number(e.target.value))}
+            />
           </div>
-          <input
-            type="range"
-            min={MIN_PRICE}
-            max={MAX_PRICE}
-            step={50_000}
-            value={rangePriceValue}
-            onChange={(e) => setRangePriceValue(Number(e.target.value))}
-          />
+          {"-"}
+          <span>{formatRupiah(rangePriceValue)}</span>
         </div>
-        <span className="horizontalLine" />
-        <Button
-          btnTitle="Terapkan"
-          btnType="button"
-          handleClick={() => false}
+        <input
+          type="range"
+          min={MIN_PRICE}
+          max={MAX_PRICE}
+          step={50_000}
+          value={rangePriceValue}
+          onChange={(e) => setRangePriceValue(Number(e.target.value))}
         />
       </div>
-    </div>
+    </TextSidebarClick>
   );
 }

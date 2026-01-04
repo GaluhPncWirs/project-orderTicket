@@ -5,7 +5,7 @@ import TextSidebarClick from "../../../layout/textSidebar/content";
 
 export default function DatePicker() {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState<any>(null);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -21,6 +21,7 @@ export default function DatePicker() {
       imgAlt="Tanggal"
       textContent="Tanggal"
       subTextContent="Pilih Tanggal"
+      onApply={() => console.log("Apply clicked")}
     >
       <div className="calendar">
         <div className="calendar__header">

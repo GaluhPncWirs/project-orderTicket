@@ -5,6 +5,18 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+/* Hilangkan arrow di Chrome, Safari, Edge, dan Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hilangkan arrow di Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .globalContainer{
   background-color: #1e293b;
 }

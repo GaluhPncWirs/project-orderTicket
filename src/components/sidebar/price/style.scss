@@ -1,41 +1,27 @@
-.containerRangePrice{
-    max-height: 0;
-    background-color: #334155;
-    border-radius: 5px;
-    margin-top: 15px;
-
-    padding: 0 15px;
+.rangePrice{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-5px);
-
-    transition:
-        max-height 0.5s ease,
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        padding 0.3s ease;
-
-    &.showContent{
-        max-height: 450px;
-        padding: 15px;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    &__content{
+    &__price {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 18px;
 
         > div {
             display: flex;
-            justify-content: space-around;
+            gap: 2px;
             align-items: center;
-            font-size: 18px;
+            justify-content: center;
+
+            > input[type=number]{
+                padding: 3px 6px 3px 6px;
+                border-radius: 5px;
+                width: 60px;
+                font-size: 15px;
+            }
         }
+
     }
 }

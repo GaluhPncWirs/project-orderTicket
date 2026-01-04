@@ -8,6 +8,7 @@ export default function City() {
       imgAlt="Kota"
       textContent="Kota"
       subTextContent="Pilih Kota"
+      onApply={() => console.log("Apply clicked")}
     >
       <ul className="containerChoosenCity__listCity">
         <li>

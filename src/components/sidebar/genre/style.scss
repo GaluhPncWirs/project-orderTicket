@@ -1,45 +1,16 @@
-.containerChoosenGenre{
-    max-height: 0;
-    background-color: #334155;
-    border-radius: 5px;
-    margin-top: 15px;
-
-    padding: 0 15px;
+.listGenre{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-5px);
-
-    transition:
-        max-height 0.5s ease,
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        padding 0.3s ease;
-
-    &.showContent{
-        max-height: 450px;
-        padding: 15px;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    &__listGenre{
+    > li {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 13px;
 
-        > li {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-
-            > input {
-                width: 17px;
-                height: 17px;
-            }
+        > input {
+            width: 17px;
+            height: 17px;
         }
     }
 }

@@ -1,0 +1,21 @@
+.containerChooseTicket{
+
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__desc{
+        display: flex;
+        justify-content: space-between;
+
+        > div{
+
+            > h2 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
