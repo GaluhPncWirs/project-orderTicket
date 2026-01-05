@@ -11,17 +11,13 @@
 
     &__contentConcert{
         display: flex;
-        gap: 15px;
+        gap: 25px;
 
         &__informConcert{
             flex-basis: 75%;
             display: flex;
             flex-direction: column;
             gap: 20px;
-
-            > div {
-                padding-left: 25px;
-            }
 
             > img{
                 width: 100%;

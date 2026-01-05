@@ -9,7 +9,7 @@ export default function Konser() {
     <RootContainer>
       <div className="containerConcert">
         <div className="containerConcert__title">
-          <h1>Expire Konser</h1>
+          <h1>Detail Konser</h1>
         </div>
         <div className="containerConcert__contentConcert">
           <Sidebar />
@@ -63,14 +63,30 @@ export default function Konser() {
               </p>
             </div>
             <span className="horizontalLine" />
-
-            <ChoosenTicket />
+            <ChoosenTicket
+              nameTicket="VIP Tiket"
+              priceTicket="2.500.000"
+              // benefit=[""]
+              remainingTicket={50}
+            />
+            <ChoosenTicket
+              nameTicket="Festival Tiket"
+              priceTicket="1.000.000"
+              // benefit=[""]
+              remainingTicket={100}
+            />
+            <ChoosenTicket
+              nameTicket="Regular Tiket"
+              priceTicket="700.000"
+              // benefit=[""]
+              remainingTicket={200}
+            />
           </div>
         </div>
 
         <div className="containerConcert__btnChosenTicket">
           <Button
-            btnTitle="Pilih Tiket"
+            btnTitle="Lanjutkan Pembayaran"
             btnType="button"
             handleClick={() => false}
           />
