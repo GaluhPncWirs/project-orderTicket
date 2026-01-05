@@ -3,51 +3,55 @@
     border-radius: 5px;
     padding: 15px;
     background-color: #475569;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
-    &__header{
+    &__descTicket{
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        background-color: #334155;
-        padding: 15px 20px 15px 20px;
-        border-radius: 7px;
+        flex-direction: column;
+        gap: 13px;
 
-        &__qtyTicket{
+        > h2 {
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        > ul li{
+            margin-bottom: 7px;
+        }
+
+    }
+
+    &__qtyTicket{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        > span {
+            background-color: #64748b;
             display: flex;
-            gap: 20px;
+            justify-content: center;
             align-items: center;
-            font-size: 20px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-
-            > span {
-                background-color: #64748b;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 5px;
-                font-size: 30px;
-                cursor: pointer;
-            }
+            width: 60px;
+            height: 35px;
+            border-radius: 5px;
+            font-size: 30px;
+            cursor: pointer;
         }
     }
 
-    &__desc{
-        display: flex;
-        justify-content: space-between;
-
-        &__benefit{
-
-            > ul {
-                display: flex;
-                margin-top: 15px;
-                flex-direction: column;
-                gap: 7px;
-            }
-        }
+    &__remainingTicket{
+        background-color: #1e293b;
+        padding: 15px 20px 15px 20px;
+        border-radius: 7px;
+        text-align: center;
     }
 }

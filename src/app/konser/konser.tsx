@@ -36,51 +36,70 @@ export default function Konser() {
             </div>
             <span className="horizontalLine" />
             <div className="containerConcert__contentConcert__informConcert__descConcert">
-              <h3>Deskripsi Konser</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                qui, nostrum accusantium magnam aperiam quam iusto voluptates
-                debitis tenetur quasi excepturi adipisci tempora, consectetur
-                sunt ex odit animi quidem harum.
-              </p>
+              <div>
+                <h2>Deskripsi Konser</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum qui, nostrum accusantium magnam aperiam quam iusto
+                  voluptates debitis tenetur quasi excepturi adipisci tempora,
+                  consectetur sunt ex odit animi quidem harum.
+                </p>
+              </div>
+              <span className="horizontalLine" />
+              <div>
+                <h2>Line Up Penyanyi</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum qui, nostrum accusantium magnam aperiam quam iusto
+                  voluptates debitis tenetur quasi excepturi adipisci tempora
+                </p>
+              </div>
+              <span className="horizontalLine" />
+              <div>
+                <h2>Syarat Dan Ketentuan</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum qui, nostrum accusantium magnam aperiam quam iusto
+                  voluptates debitis tenetur quasi excepturi adipisci tempora
+                </p>
+              </div>
+              <span className="horizontalLine" />
             </div>
-            <span className="horizontalLine" />
-            <div className="containerConcert__contentConcert__informConcert__lineUpConcert">
-              <h3>Line Up Penyanyi</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                qui, nostrum accusantium magnam aperiam quam iusto voluptates
-                debitis tenetur quasi excepturi adipisci tempora
-              </p>
+            <div className="containerConcert__contentConcert__informConcert__typeTicket">
+              <h1>Tipe Tiket Konser</h1>
+              <div className="containerConcert__contentConcert__informConcert__typeTicket__chosenTicket">
+                <ChoosenTicket
+                  nameTicket="VIP Tiket"
+                  priceTicket="2.500.000"
+                  benefit={["benefit 1", "benefit 2", "benefit 3", "benefit 4"]}
+                  remainingTicket={50}
+                />
+                <ChoosenTicket
+                  nameTicket="Festival Tiket"
+                  priceTicket="1.000.000"
+                  benefit={["benefit 1", "benefit 2", "benefit 3", "benefit 4"]}
+                  remainingTicket={100}
+                />
+                <ChoosenTicket
+                  nameTicket="Regular Tiket"
+                  priceTicket="700.000"
+                  benefit={["benefit 1", "benefit 2", "benefit 3", "benefit 4"]}
+                  remainingTicket={200}
+                />
+                <ChoosenTicket
+                  nameTicket="Regular Tiket"
+                  priceTicket="700.000"
+                  benefit={["benefit 1", "benefit 2", "benefit 3", "benefit 4"]}
+                  remainingTicket={200}
+                />
+                <ChoosenTicket
+                  nameTicket="Regular Tiket"
+                  priceTicket="700.000"
+                  benefit={["benefit 1", "benefit 2", "benefit 3", "benefit 4"]}
+                  remainingTicket={200}
+                />
+              </div>
             </div>
-            <span className="horizontalLine" />
-            <div className="containerConcert__contentConcert__informConcert__termsAndConditions">
-              <h3>Syarat Dan Ketentuan</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                qui, nostrum accusantium magnam aperiam quam iusto voluptates
-                debitis tenetur quasi excepturi adipisci tempora
-              </p>
-            </div>
-            <span className="horizontalLine" />
-            <ChoosenTicket
-              nameTicket="VIP Tiket"
-              priceTicket="2.500.000"
-              // benefit=[""]
-              remainingTicket={50}
-            />
-            <ChoosenTicket
-              nameTicket="Festival Tiket"
-              priceTicket="1.000.000"
-              // benefit=[""]
-              remainingTicket={100}
-            />
-            <ChoosenTicket
-              nameTicket="Regular Tiket"
-              priceTicket="700.000"
-              // benefit=[""]
-              remainingTicket={200}
-            />
           </div>
         </div>
 

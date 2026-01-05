@@ -73,16 +73,38 @@
 
             }
 
-            h3{
-                font-size: 30px;
-                margin-bottom: 10px;
+            &__descConcert{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 23px;
+                }
             }
 
-            p {
-                text-align: justify;
-                line-height: 23px;
-            }
+            &__typeTicket{
+                margin-top: 15px;
 
+                > h1 {
+                    margin-bottom: 25px;
+                    font-size: 30px;
+                }
+
+                &__chosenTicket{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+            }
         }
     }
 
