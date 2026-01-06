@@ -5,7 +5,9 @@ import HomePage from "./homepage/homePage.tsx";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Category from "./category/category.tsx";
-import Konser from "./konser/konser.tsx";
+import PaymentPage from "./concertPage/payment/page.tsx";
+import DetailConcert from "./concertPage/detailConcern/page.tsx";
+import ConcertPage from "./concertPage/layout.tsx";
 
 const rootApp = document.getElementById("root");
 
@@ -15,8 +17,18 @@ const route = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/konser",
-    element: <Konser />,
+    path: "/concertPage",
+    element: <ConcertPage />,
+    children: [
+      {
+        index: true,
+        element: <DetailConcert />,
+      },
+      {
+        path: "payment",
+        element: <PaymentPage />,
+      },
+    ],
   },
   {
     path: "/category/:idProd",

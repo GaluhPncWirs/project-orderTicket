@@ -14,7 +14,7 @@ export default function NavigationBar() {
         <Link to="/" className="linkNavbar">
           Home
         </Link>
-        <Link to="/konser" className="linkNavbar">
+        <Link to="/concertPage" className="linkNavbar">
           Konser
         </Link>
         <Link to="/" className="linkNavbar">
