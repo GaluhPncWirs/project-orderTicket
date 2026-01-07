@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import Button from "../../../components/button/content";
 import Sidebar from "../../../components/sidebar/content";
 import ChoosenTicket from "../../../layout/choosenTicket/content";
 import "./style.scss";
@@ -95,12 +94,9 @@ export default function DetailConcert() {
       </div>
 
       <div className="btnChosenTicket">
-        <Button
-          btnTitle="Lanjutkan Pembayaran"
-          btnType="button"
-          handleClick={() => false}
-        />
-        <Link to="payment">lanjutkan pembayaran</Link>
+        <Link to="payment" className="Link">
+          lanjutkan pembayaran
+        </Link>
       </div>
     </div>
   );
