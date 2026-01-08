@@ -5,7 +5,7 @@ import Button from "../../../components/button/content";
 import { Link } from "react-router";
 
 export default function PaymentPage() {
-  const [isMethodPayment, setIsMethodPayment] = useState(false);
+  const [isMethodPayment, setIsMethodPayment] = useState("credit");
 
   return (
     <div>
@@ -56,108 +56,100 @@ export default function PaymentPage() {
           <div className="containerCheckout__dataBuyer__payment">
             <div className="containerCheckout__dataBuyer__payment__method">
               <h2
-                onClick={() => setIsMethodPayment(false)}
-                className={`${isMethodPayment === false && `changeMethod`}`}
+                onClick={() => setIsMethodPayment("credit")}
+                className={`${
+                  isMethodPayment === "credit" ? `changeMethod` : ``
+                }`}
               >
                 Kartu Kredit
               </h2>
               <h2
-                onClick={() => setIsMethodPayment(true)}
-                className={`${isMethodPayment === true && `changeMethod`}`}
+                onClick={() => setIsMethodPayment("e-wallet")}
+                className={`${
+                  isMethodPayment === "e-wallet" ? `changeMethod` : ``
+                }`}
               >
                 E-Wallet
               </h2>
             </div>
-            <div className="animateChangeMethod">
-              {isMethodPayment ? (
-                <>
-                  <div className="containerCheckout__dataBuyer__payment__listPayment">
-                    <img src="/images/concertPage/ovo.png" alt="ovo" />
-                    <img src="/images/concertPage/dana.png" alt="dana" />
-                    <img
-                      src="/images/concertPage/shopeePay.png"
-                      alt="shopeePay"
-                    />
-                    <img src="/images/concertPage/goPay.png" alt="goPay" />
+            {isMethodPayment === "e-wallet" ? (
+              <>
+                <div className="containerCheckout__dataBuyer__payment__e-wallet">
+                  <img src="/images/concertPage/ovo.png" alt="ovo" />
+                  <img src="/images/concertPage/dana.png" alt="dana" />
+                  <img
+                    src="/images/concertPage/shopeePay.png"
+                    alt="shopeePay"
+                  />
+                  <img src="/images/concertPage/goPay.png" alt="goPay" />
+                </div>
+                <span className="horizontalLine" />
+                <div className="containerCheckout__dataBuyer__payment__inputDataPaymentE-wallet">
+                  <h2>Pembayaran Aman</h2>
+                  <div>
+                    <span>Butuh Bantuan ?</span>
+                    <span>0812-3456-7890</span>
                   </div>
-                  <span className="horizontalLine" />
-                  <div className="containerCheckout__dataBuyer__payment__inputDataPayment">
+                </div>
+                <div className="containerCheckout__dataBuyer__payment__saveInformBuy">
+                  <input type="checkbox" id="saveInform" />
+                  <label htmlFor="saveInform">
+                    Simpan informasi saya untuk pembelian di kemudian hari
+                  </label>
+                </div>
+                <div className="containerCheckout__dataBuyer__payment__btnConfirm">
+                  <Link to="/concertPage" className="Link">
+                    Kembali
+                  </Link>
+                  <Button
+                    btnTitle="Bayar Sekarang"
+                    btnType="button"
+                    handleClick={() => false}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="containerCheckout__dataBuyer__payment__credit">
+                  <img src="/images/concertPage/bca.png" alt="bca" />
+                  <img src="/images/concertPage/bni.png" alt="bni" />
+                  <img src="/images/concertPage/bri.png" alt="bri" />
+                </div>
+                <span className="horizontalLine" />
+                <div className="containerCheckout__dataBuyer__payment__inputDataPaymentCredit">
+                  <div>
+                    <label htmlFor="noCard">No Kartu</label>
+                    <input type="number" id="noCard" />
+                  </div>
+                  <div className="periodeValidity">
                     <div>
-                      <label htmlFor="noCard">Nomor Kartu</label>
-                      <input type="number" id="noCard" />
+                      <label htmlFor="masaBerlaku">Masa Berlaku</label>
+                      <input type="date" id="masaBerlaku" />
                     </div>
-                    <div className="periodeValidity">
-                      <div>
-                        <label htmlFor="masaBerlaku">Masa Berlaku</label>
-                        <input type="date" id="masaBerlaku" />
-                      </div>
-                      <div>
-                        <label htmlFor="cvv">CVV</label>
-                        <input type="number" id="cvv" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="containerCheckout__dataBuyer__payment__saveInformBuy">
-                    <input type="checkbox" id="saveInform" />
-                    <label htmlFor="saveInform">
-                      Simpan informasi saya untuk pembelian di kemudian hari
-                    </label>
-                  </div>
-                  <div className="containerCheckout__dataBuyer__payment__btnConfirm">
-                    <Link to="/concertPage" className="Link">
-                      Kembali
-                    </Link>
-                    <Button
-                      btnTitle="Bayar Sekarang"
-                      btnType="button"
-                      handleClick={() => false}
-                    />
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="containerCheckout__dataBuyer__payment__listPayment">
-                    <img src="/images/concertPage/bca.png" alt="bca" />
-                    <img src="/images/concertPage/bni.png" alt="bni" />
-                    <img src="/images/concertPage/bri.png" alt="bri" />
-                    <img src="/images/concertPage/visa.png" alt="visa" />
-                  </div>
-                  <span className="horizontalLine" />
-                  <div className="containerCheckout__dataBuyer__payment__inputDataPayment">
                     <div>
-                      <label htmlFor="noCard">No Kartu</label>
-                      <input type="number" id="noCard" />
-                    </div>
-                    <div className="periodeValidity">
-                      <div>
-                        <label htmlFor="masaBerlaku">Masa Berlaku</label>
-                        <input type="date" id="masaBerlaku" />
-                      </div>
-                      <div>
-                        <label htmlFor="cvv">CVV</label>
-                        <input type="number" id="cvv" />
-                      </div>
+                      <label htmlFor="cvv">CVV</label>
+                      <input type="number" id="cvv" />
                     </div>
                   </div>
-                  <div className="containerCheckout__dataBuyer__payment__saveInformBuy">
-                    <input type="checkbox" id="saveInform" />
-                    <label htmlFor="saveInform">
-                      Simpan informasi saya untuk pembelian di kemudian hari
-                    </label>
-                  </div>
-                  <div className="containerCheckout__dataBuyer__payment__btnConfirm">
-                    <Link to="/concertPage" className="Link">
-                      Kembali
-                    </Link>
-                    <Button
-                      btnTitle="Bayar Sekarang"
-                      btnType="button"
-                      handleClick={() => false}
-                    />
-                  </div>
-                </>
-              )}
-            </div>
+                </div>
+                <div className="containerCheckout__dataBuyer__payment__saveInformBuy">
+                  <input type="checkbox" id="saveInform" />
+                  <label htmlFor="saveInform">
+                    Simpan informasi saya untuk pembelian di kemudian hari
+                  </label>
+                </div>
+                <div className="containerCheckout__dataBuyer__payment__btnConfirm">
+                  <Link to="/concertPage" className="Link">
+                    Kembali
+                  </Link>
+                  <Button
+                    btnTitle="Bayar Sekarang"
+                    btnType="button"
+                    handleClick={() => false}
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
