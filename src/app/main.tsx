@@ -8,6 +8,7 @@ import Category from "./category/category.tsx";
 import PaymentPage from "./concertPage/payment/page.tsx";
 import DetailConcert from "./concertPage/detailConcern/page.tsx";
 import ConcertPage from "./concertPage/layout.tsx";
+import SchedulePage from "./schedulePage/schedule.tsx";
 
 const rootApp = document.getElementById("root");
 
@@ -29,6 +30,10 @@ const route = createBrowserRouter([
         element: <PaymentPage />,
       },
     ],
+  },
+  {
+    path: "/scheduleConcert",
+    element: <SchedulePage />,
   },
   {
     path: "/category/:idProd",

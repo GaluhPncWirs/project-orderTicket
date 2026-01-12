@@ -17,7 +17,7 @@ export default function NavigationBar() {
         <Link to="/concertPage" className="linkNavbar">
           Konser
         </Link>
-        <Link to="/" className="linkNavbar">
+        <Link to="/scheduleConcert" className="linkNavbar">
           Jadwal
         </Link>
         <Link to="/" className="linkNavbar">
