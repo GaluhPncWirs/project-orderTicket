@@ -12,8 +12,8 @@
     column-gap: 20px;
 
     &__content{
-        flex-basis: 75%;
-
+        width: 75%;
+        
 
         &__listCity{
             display: flex;
@@ -28,6 +28,18 @@
             border-radius: 5px;
             padding: 0px 15px 0px 15px;
             letter-spacing: 1.5px;
+        }
+
+        &__container{
+            margin-top: 30px;
+
+            &__cardConcerts{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 50px;
+                place-items: center;
+            }
+
         }
     }
 }

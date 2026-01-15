@@ -3,9 +3,9 @@ import RootContainer from "../../layout/rootContainer";
 import "./style.scss";
 import SearchInput from "../../components/searchInput/content";
 import Button from "../../components/button/content";
-import CardArtikel from "../../layout/cardArtikel/content";
 import CardArtist from "../../layout/cardArtist/content";
 import type { cardArtikel } from "../../types/cardArtikel";
+import CardComponent from "../../layout/card/layout";
 
 type artis = {
   id: string;
@@ -255,12 +255,15 @@ export default function HomePage() {
             <div className="artikel__cardArtikel">
               {artikel.map((item: cardArtikel, i: number) => (
                 <div key={i}>
-                  <CardArtikel
+                  <CardComponent
                     srcImg={item.srcImg}
-                    titleArtikel={item.titleArtikel}
-                    descArtikel={item.descArtikel}
-                    dateArtikel={item.dateArtikel}
-                  />
+                    altImg="artikel"
+                    btnTitle="Baca Selengkapnya"
+                  >
+                    <h2>{item.titleArtikel}</h2>
+                    <p>{item.descArtikel.substring(0, 100)} ...</p>
+                    <h4>{item.dateArtikel}</h4>
+                  </CardComponent>
                 </div>
               ))}
             </div>

@@ -14,11 +14,11 @@ export default function NavigationBar() {
         <Link to="/" className="linkNavbar">
           Home
         </Link>
-        <Link to="/concertPage" className="linkNavbar">
-          Konser
-        </Link>
         <Link to="/scheduleConcert" className="linkNavbar">
           Jadwal
+        </Link>
+        <Link to="/concertPage" className="linkNavbar">
+          Konser
         </Link>
         <Link to="/" className="linkNavbar">
           Bantuan
