@@ -19,8 +19,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background-color: #94a3b8;
-            color: #0f172a;
+            background-color: #475569;
             font-weight: 600;
             font-size: 20px;
             height: 60px;
@@ -28,6 +27,12 @@
             border-radius: 5px;
             padding: 0px 15px 0px 15px;
             letter-spacing: 1.5px;
+
+            :nth-child(1){
+                background-color: #9ca3af;
+                padding: 5px 10px 5px 10px;
+                border-radius: 10px;
+            }
         }
 
         &__container{
@@ -40,6 +45,42 @@
                 place-items: center;
             }
 
+        }
+
+        &__pagination{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            column-gap: 15px;
+            margin-top: 20px;
+
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                width: 35px;
+                height: 30px;
+            }
+
+            &__number{
+                color: #334155;
+
+                span{
+                    background-color: #e2e8f0;
+                    padding: 5px 13px 5px 13px;
+                    font-weight: 600;
+                    border: 1px solid #475569;
+                    cursor: pointer;
+                }
+
+                span:nth-child(1){
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    border: none;
+                }
+
+            }
         }
     }
 }

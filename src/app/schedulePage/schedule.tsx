@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Sidebar from "../../components/sidebar/content";
 import CardComponent from "../../layout/card/layout";
 import RootContainer from "../../layout/rootContainer";
@@ -60,6 +61,19 @@ export default function SchedulePage() {
                 </h2>
               </CardComponent>
             </div>
+          </div>
+          <div className="scheduleConcert__content__pagination">
+            <button>
+              <ChevronLeft />
+            </button>
+            <div className="scheduleConcert__content__pagination__number">
+              {Array.from({ length: 5 }).map((_: any, i: number) => (
+                <span key={i}>{i + 1}</span>
+              ))}
+            </div>
+            <button>
+              <ChevronRight />
+            </button>
           </div>
         </div>
       </div>
